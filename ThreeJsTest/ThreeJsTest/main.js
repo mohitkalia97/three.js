@@ -1,6 +1,7 @@
 import * as THREE from './three/build/three.module.js';
 import { TrackballControls } from './three/examples/jsm/controls/TrackballControls.js';
-import { Snowman, TAirPlane, TPropeller } from './plane.js';
+import { TAirPlane, TPropeller } from './plane.js';
+import { Snowman } from './snowman.js';
 
 export class TScene {
     constructor(c) {
@@ -46,19 +47,19 @@ export class TScene {
         this.boxhelper = new THREE.BoxHelper(this.sphere, 0xffff00);
         this.sphere.add(this.boxhelper);
 
-        let airplane = new TAirPlane().assemble(this.scene);
+        // let airplane = new TAirPlane().assemble(this.scene);         // add airplane
 
-        this.propeller = new TPropeller();
-        this.propeller.assemble(this.scene);
+        // this.propeller = new TPropeller();                           // add propeller
+        // this.propeller.assemble(this.scene);
 
         this.snowman = new Snowman();
-        this.snowman.assemble();
+        this.snowman.assemble(this.scene);
     }
 
    
     animate() {
         this.controls.update();
-        this.propeller.animate();
+        //this.propeller.animate();
         this.render();
         requestAnimationFrame(this.animate.bind(this));
             
