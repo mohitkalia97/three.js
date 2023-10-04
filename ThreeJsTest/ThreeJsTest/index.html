@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <canvas id="c" style="border: 5px solid orange"></canvas>
+
+
+    <script type="module">
+        import { TScene } from './main.js';
+
+        window.onload = function () {
+
+            const scene = new TScene(document.getElementById('c'));
+            scene.animate();
+        }
+
+    </script>
+</body>
+</html>
