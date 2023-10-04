@@ -1,6 +1,6 @@
 import * as THREE from './three/build/three.module.js';
 import { TrackballControls } from './three/examples/jsm/controls/TrackballControls.js';
-import { TAirPlane, TPropeller } from './plane.js';
+import { Snowman, TAirPlane, TPropeller } from './plane.js';
 
 export class TScene {
     constructor(c) {
@@ -50,6 +50,9 @@ export class TScene {
 
         this.propeller = new TPropeller();
         this.propeller.assemble(this.scene);
+
+        this.snowman = new Snowman();
+        this.snowman.assemble();
     }
 
    
