@@ -1,8 +1,6 @@
 ﻿import * as THREE from './three/build/three.module.js';
 
-
 export class TAirPlane {
-
     constructor() {
 
         this.color = 0xff0000;
@@ -16,7 +14,6 @@ export class TAirPlane {
     assemble(scene) {
 
         this.material = new THREE.MeshPhongMaterial({
-
             color: this.color,
             emissive: 0x222222,
             reflectivity: 0.5,
@@ -37,31 +34,20 @@ export class TAirPlane {
 
         this.leitwerk.position.x = (this.laenge / 2) - 4;
         this.leitwerk.position.y = (this.breite / 2) + 4;
-
         
-
         this.group.add(this.rumpf);
         this.group.add(this.fluegel);
         this.group.add(this.leitwerk);
 
-
         scene.add(this.group);
-
     }
 
-    animate() {
-
-
-    }
 }
 
 
 export class TPropeller extends TAirPlane {
-
     constructor() {
-
         super();
-
     }
 
     assemble(scene) {
@@ -77,12 +63,10 @@ export class TPropeller extends TAirPlane {
         this.group.children.forEach(child => {
             child.castShadow = true;
         })
-
     }
 
     animate() {
         this.propeller.rotateX(0.5);
-        
     }
 }
 

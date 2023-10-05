@@ -3,7 +3,6 @@ import * as THREE from './three/build/three.module.js';
 export class Snowman {
     constructor(radius, widthSegments, heightSegments, phiStart ,phiLength, thetaStart, thetaLength) {
 
-        // radius = 1, widthSegments = 32, heightSegments = 16, phiStart = 0, phiLength = Math.PI * 2, thetaStart = 0, thetaLength = Math.PI
         this.type = 'SphereGeometry';
 
         this.parameters = {

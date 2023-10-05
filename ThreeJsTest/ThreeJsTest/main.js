@@ -57,6 +57,7 @@ export class TScene {
 
     animate() {
         this.controls.update();
+
         this.snowman.animate();
 
         this.render();
