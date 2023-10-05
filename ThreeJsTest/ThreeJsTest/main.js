@@ -51,15 +51,14 @@ export class TScene {
         this.sphere.add(this.boxhelper);
 
         this.snowman = new Snowman(1, 32, 16, 0, Math.PI * 2, 0, Math.PI);
-
         this.snowman.assemble(this.scene);
-
-        //this.snowman.sphereMesh.position.set(4, 4, 4);
         
     }
 
     animate() {
         this.controls.update();
+        this.snowman.animate();
+
         this.render();
         requestAnimationFrame(this.animate.bind(this));
     };

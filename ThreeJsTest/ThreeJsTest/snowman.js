@@ -31,7 +31,6 @@ export class Snowman {
         this.sphereMesh = new THREE.Mesh(geometry, material);
         this.sphereMesh2 = new THREE.Mesh(geometry, material);
 
-        for (int i = 0, )
         this.sphereMesh2.position.x = 0;
         this.sphereMesh2.position.y = 2;
 
@@ -39,5 +38,10 @@ export class Snowman {
         scene.add(this.sphereMesh2);
 
     };
+
+    animate() {
+        this.sphereMesh.position.y += 1;
+    }
+
 
 }
